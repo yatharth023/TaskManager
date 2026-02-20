@@ -47,25 +47,25 @@ public class TaskService {
         taskRepository.delete(task);
     }
 
-//    private TaskResponseDTO maptoResponse(Task task) {
-//        TaskResponseDTO dto = new TaskResponseDTO();
-//        dto.setId(task.getId());
-//        dto.setTitle(task.getTitle());
-//        dto.setDescription(task.getDescription());
-//        dto.setStatus(task.getStatus().name());
-//        dto.setDuedate(task.getDuedate());
-//        return dto;
-//    }
-//
-//    private Task mapToEntity(TaskResponseDTO dto) {
-//        Task task = new Task();
-//        task.setId(dto.getId());
-//        task.setTitle(dto.getTitle());
-//        task.setDescription(dto.getDescription());
-//        task.setStatus(TaskStatus.valueOf(dto.getStatus()));
-//        task.setDuedate(dto.getDuedate());
-//        return task;
-//    }
+    private TaskResponseDTO maptoResponse(Task task) {
+        TaskResponseDTO dto = new TaskResponseDTO();
+        dto.setId(task.getId());
+        dto.setTitle(task.getTitle());
+        dto.setDescription(task.getDescription());
+        dto.setStatus(task.getStatus().name());
+        dto.setDuedate(task.getDuedate());
+        return dto;
+    }
+
+    private Task mapToEntity(TaskResponseDTO dto) {
+        Task task = new Task();
+        task.setId(dto.getId());
+        task.setTitle(dto.getTitle());
+        task.setDescription(dto.getDescription());
+        task.setStatus(TaskStatus.valueOf(dto.getStatus()));
+        task.setDuedate(dto.getDuedate());
+        return task;
+    }
 }
 
 // Why Service layer?
